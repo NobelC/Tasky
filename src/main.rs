@@ -1,3 +1,7 @@
+mod backend;
+use backend::project::Project;
+
 fn main() {
-    println!("hello Tasky");
+    let test = Project::new("Prueba", "Jeremy");
+    println!("hello Tasky: {:}", test.get_id());
 }
