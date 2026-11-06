@@ -1,0 +1,22 @@
+# ── System, editors and secrets ──
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+.direnv/
+.env
+.env.*
+!.env.example
+*.log
+
+# ── Rust ──
+/target/
+**/*.rs.bk
+*.pdb
+mutants.out*/
+# Cargo.lock IS committed (binaries and, nowadays, libraries too). Uncomment to ignore it:
+# Cargo.lock
+
