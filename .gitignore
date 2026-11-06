@@ -17,6 +17,7 @@ Thumbs.db
 **/*.rs.bk
 *.pdb
 mutants.out*/
-# Cargo.lock IS committed (binaries and, nowadays, libraries too). Uncomment to ignore it:
-# Cargo.lock
+debug
+rustc-ice-*.txt
+
 
