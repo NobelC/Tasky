@@ -1,7 +1,10 @@
-mod backend;
-use backend::project::Project;
+mod app;
+mod event;
+mod tui;
 
-fn main() {
-    let test = Project::new("Prueba", "Jeremy");
-    println!("hello Tasky: {:}", test.get_id());
+use {app::App, tui::run};
+
+fn main() -> std::io::Result<()> {
+    let mut app = App::new();
+    ratatui::run(|terminal| run(&mut app, terminal))
 }

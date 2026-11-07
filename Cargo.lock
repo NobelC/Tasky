@@ -1474,6 +1474,7 @@ name = "tasky"
 version = "0.1.0"
 dependencies = [
  "chrono",
+ "crossterm",
  "ratatui",
  "rusqlite",
  "uuid",
