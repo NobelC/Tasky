@@ -1,6 +1,7 @@
 mod app;
 mod event;
 mod tui;
+mod utilities;
 
 use {app::App, tui::run};
 
