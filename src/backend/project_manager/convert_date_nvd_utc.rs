@@ -1,6 +1,11 @@
 use crate::backend::task::TimeStatusTask;
 use chrono::{DateTime, NaiveDate, Utc};
 
+pub enum TypeDate {
+    Creation,
+    Deadline,
+}
+
 pub(super) fn convert_date(date_raw: &str) -> DateTime<Utc> {
     NaiveDate::parse_from_str(date_raw, "%d-%m-%Y")
         .unwrap()

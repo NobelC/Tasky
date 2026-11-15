@@ -1,6 +1,6 @@
-mod manipulation_data;
-use crate::utilities::utils_backend::DataRawProject;
-
+pub mod calculate_status;
+pub mod convert_date_nvd_utc;
+pub mod format_date;
 use super::project::{Project, StatusProject};
 use super::task::{Task, TimeStatusTask};
 
@@ -25,7 +25,7 @@ impl ProjectManager {
         &self.task
     }
     // =================== Setter's Information ==================
-    pub fn setter_new_project(&mut self, new_data: DataRawProject) {
+    pub fn setter_new_project(&mut self, new_data: (String, String, String)) {
         let mut new_project = Project::default();
         new_project.set_project_name("Hol".to_string());
         //Parse date (DD-MM-YYYY)

@@ -1,16 +1,4 @@
 use chrono::{DateTime, NaiveDateTime, Utc};
-
-pub struct DataRawProject {
-    name: String,
-    deadline: String,
-    author: String,
-}
-
-pub enum TypeDate {
-    Creation,
-    Deadline,
-}
-
 pub trait FormattableDate {
     fn format_date(&self) -> String;
 }

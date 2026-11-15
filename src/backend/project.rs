@@ -1,4 +1,5 @@
-use crate::utilities::utils_backend;
+use crate::backend::project_manager::convert_date_nvd_utc::TypeDate;
+use crate::backend::project_manager::format_date::format_date;
 use chrono::{DateTime, Utc};
 
 #[derive(Debug, Clone, Copy)]
@@ -82,10 +83,10 @@ impl Project {
         self.status
     }
     //======================== Format Getter's Methods ================================
-    pub fn get_format_date(&self, date: utils_backend::TypeDate) -> String {
+    pub fn get_format_date(&self, date: TypeDate) -> String {
         match date {
-            utils_backend::TypeDate::Creation => utils_backend::format_date(self.creation_time),
-            utils_backend::TypeDate::Deadline => utils_backend::format_date(self.deadline_date),
+            TypeDate::Creation => format_date(self.creation_time),
+            TypeDate::Deadline => format_date(self.deadline_date),
         }
     }
     pub fn get_status_format(status: StatusProject) -> String {

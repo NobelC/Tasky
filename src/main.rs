@@ -2,7 +2,6 @@ mod app;
 mod backend;
 mod event;
 mod tui;
-mod utilities;
 
 use {crate::backend::project::Project, app::App, tui::run};
 
